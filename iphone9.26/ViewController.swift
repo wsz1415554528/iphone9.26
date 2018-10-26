@@ -363,7 +363,7 @@ class ViewController: UIViewController{
         }else if number == 4 {
             
             d = x / (c)
-            //tt
+            
             
         }else {
             
