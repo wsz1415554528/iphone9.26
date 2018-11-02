@@ -7,21 +7,14 @@
 //
 
 import UIKit
+    var result_1 = ""
+    var result_2 = ""
 
-class ViewController: UIViewController{
+    class ViewController: UIViewController{
     
     @IBOutlet weak var result:  UITextField!
-    
-    @IBOutlet weak var result_1: UITextField!
-    
-    @IBOutlet weak var result_2: UITextField!
-    
-    override func viewDidLoad() {
-        
-        super.viewDidLoad()
-        
-    }
-    
+   
+   
     override func didReceiveMemoryWarning()
     {
         
@@ -29,13 +22,12 @@ class ViewController: UIViewController{
         
     }
     
-    var number = 0//判断加减乘除
+    var number = 0
     
-    var judge = 0//决定输出数字的位数
-    
+    var judge = 0
     var add = 0
     
-    var re = 0//判断result.text前是否存在符号
+    var re = 0
     
     @IBAction func number1(_ sender: Any) {
         
@@ -162,14 +154,15 @@ class ViewController: UIViewController{
     {
         result.text = ""
         re = 0
+        add = 0
     }
     @IBAction func minus(_ sender: Any)
     {
         if add == 1{
-            let a = Double(result_1.text!)!
+            let a = Double(result_1)!
             let b = Double(result.text!)!
             let c = a - b
-            result_1.text = String(c)
+            result_1 = String(c)
             result.text = ""
             number = 1
             re = 1
@@ -182,11 +175,11 @@ class ViewController: UIViewController{
             else
             {
                 let x = Double(result.text!)!
-                result_1.text = String(x)
+                result_1 = String(x)
                 result.text = ""
                 number = 1
                 re = 0
-                
+                add = 1
             }
             
         }
@@ -199,13 +192,13 @@ class ViewController: UIViewController{
         if add == 1
         {
             
-            let a = Double(result_1.text!)!
+            let a = Double(result_1)!
             
             let b = Double(result.text!)!
             
             let c = a + b
             
-            result_1.text = String(c)
+            result_1 = String(c)
             
             result.text = ""
             
@@ -225,16 +218,17 @@ class ViewController: UIViewController{
             else
             {
                 
+                
                 let x = Double(result.text!)!
                 
-                result_1.text = String(x)
+                result_1 = String(x)
                 
                 result.text = ""
                 
                 number = 2
                 
                 re = 0
-                
+                add = 1
             }
             
         }
@@ -247,13 +241,13 @@ class ViewController: UIViewController{
         if add == 1
         {
             
-            let a = Double(result_1.text!)!
+            let a = Double(result_1)!
             
             let b = Double(result.text!)!
             
             let c = a * b
             
-            result_1.text = String(c)
+            result_1 = String(c)
             
             result.text = ""
             
@@ -273,7 +267,7 @@ class ViewController: UIViewController{
                 
                 let x = Double(result.text!)!
                 
-                result_1.text = String(x)
+                result_1 = String(x)
                 
                 result.text = ""
                 
@@ -294,13 +288,13 @@ class ViewController: UIViewController{
         
         if add == 1{
             
-            let a = Double(result_1.text!)!
+            let a = Double(result_1)!
             
             let b = Double(result.text!)!
             
             let c = a / b
             
-            result_1.text = String(c)
+            result_1 = String(c)
             
             result.text = ""
             
@@ -320,7 +314,7 @@ class ViewController: UIViewController{
                 
                 let y = Double(result.text!)!
                 
-                result_1.text = String(y)
+                result_1 = String(y)
                 
                 result.text = ""
                 
@@ -344,7 +338,7 @@ class ViewController: UIViewController{
         var d:Double
         
         var c:Double
-        let x=Double(result_1.text!)!
+        let x=Double(result_1)!
         
         c = (result.text! as NSString).doubleValue
         
@@ -371,13 +365,15 @@ class ViewController: UIViewController{
             
         }
         
-        result_2.text = String(c)
+        result_2 = String(c)
         
         if judge == 1{
             
             result.text = String(format:"%f", d)
             
-        }else {
+        }
+        else
+        {
             
             result.text = String(format:"%.0f", d)
             
