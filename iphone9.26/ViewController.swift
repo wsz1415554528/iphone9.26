@@ -6,29 +6,21 @@
 //  Copyright © 2018年 s20161104602. All rights reserved.
 //
 
-import UIKit
+    import UIKit
     var result_1 = ""
     var result_2 = ""
-
+    var result_3 = ""
+    var  m = 0
     class ViewController: UIViewController{
-    
     @IBOutlet weak var result:  UITextField!
-   
-   
     override func didReceiveMemoryWarning()
     {
-        
         super.didReceiveMemoryWarning()
-        
     }
-    
     var number = 0
-    
     var judge = 0
     var add = 0
-    
     var re = 0
-    
     @IBAction func number1(_ sender: Any) {
         
         if re == 1
@@ -146,8 +138,16 @@ import UIKit
     }
     @IBAction func dot(_ sender: Any)
     {
+        if(m == 0)
+        {
         result.text = result.text! + "."
+        m == 1
+        }
+        else{
+          result.text = result.text! + ""
+        }
         judge = 1
+        
     }
     
     @IBAction func clear(_ sender: Any)
@@ -351,42 +351,39 @@ import UIKit
             d = x + c
             
         }else if number == 3 {
-            
             d = x * c
-            
         }else if number == 4 {
-            
             d = x / (c)
-            
-            
         }else {
-            
             d = 1000
-            
         }
+       
+        if judge == 1
+        {
+            result.text = String(format:"%lf", d)
         
-        result_2 = String(c)
-        
-        if judge == 1{
-            
-            result.text = String(format:"%f", d)
-            
+            while (result.text?.last == "0")
+         {
+            result.text?.removeLast()
+         }
         }
         else
         {
+            result.text = String(format:"%f", d)
             
-            result.text = String(format:"%.0f", d)
-            
+            while (result.text?.last == "0")
+            {
+                result.text?.removeLast()
+            }
+            if(result.text?.last == ".")
+             {
+                result.text?.removeLast()
+             }
         }
-        
         re = 1
-        
         judge = 0
-        
         add = 0
-        
     }
-    
 }
 
     
