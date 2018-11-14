@@ -155,6 +155,7 @@
         result.text = ""
         re = 0
         add = 0
+        m = 0
     }
     @IBAction func minus(_ sender: Any)
     {   m = 0
