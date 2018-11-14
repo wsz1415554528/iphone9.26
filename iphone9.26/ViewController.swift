@@ -141,7 +141,7 @@
         if(m == 0)
         {
         result.text = result.text! + "."
-        m = 1
+       m = 1
         }
         else{
           result.text = result.text! + ""
@@ -157,7 +157,7 @@
         add = 0
     }
     @IBAction func minus(_ sender: Any)
-    {
+    {   m = 0
         if add == 1{
             let a = Double(result_1)!
             let b = Double(result.text!)!
@@ -188,7 +188,7 @@
     
     @IBAction func plus(_ sender: Any)
     {
-        
+        m = 0
         if add == 1
         {
             
@@ -239,7 +239,7 @@
     
     @IBAction func multiply(_ sender: Any)
     {
-        
+        m = 0
         if add == 1
         {
             
@@ -287,7 +287,7 @@
     
     @IBAction func divide(_ sender: Any)
     {
-        
+        m = 0
         if add == 1{
             
             let a = Double(result_1)!
