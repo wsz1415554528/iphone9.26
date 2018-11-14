@@ -7,9 +7,9 @@
 //
 
     import UIKit
-    var result_1 = ""
-    var result_2 = ""
-    var result_3 = ""
+    var result_1 = " "
+    var result_2 = " "
+    //var result_3 = ""
     var  m = 0
     class ViewController: UIViewController{
     @IBOutlet weak var result:  UITextField!
@@ -18,9 +18,9 @@
         super.didReceiveMemoryWarning()
     }
     var number = 0
-    var judge = 0
-    var add = 0
-    var re = 0
+    var judge  = 0
+    var add    = 0
+    var re     = 0
     @IBAction func number1(_ sender: Any) {
         
         if re == 1
@@ -141,7 +141,7 @@
         if(m == 0)
         {
         result.text = result.text! + "."
-        m == 1
+        m = 1
         }
         else{
           result.text = result.text! + ""
@@ -215,7 +215,9 @@
                 result.text = "0"
                 
             }
+                
             else
+                
             {
                 
                 
@@ -363,26 +365,27 @@
             result.text = String(format:"%lf", d)
         
             while (result.text?.last == "0")
-         {
-            result.text?.removeLast()
-         }
+            {
+                 result.text?.removeLast()
+            }
         }
         else
         {
-            result.text = String(format:"%f", d)
+              result.text = String(format:"%f", d)
             
             while (result.text?.last == "0")
             {
                 result.text?.removeLast()
             }
-            if(result.text?.last == ".")
-             {
+                if(result.text?.last == ".")
+            {
                 result.text?.removeLast()
-             }
+            }
         }
         re = 1
         judge = 0
         add = 0
+        m = 0
     }
 }
 
