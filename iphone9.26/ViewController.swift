@@ -136,17 +136,41 @@
             result.text = result.text! + "0"
         }
     }
+     @IBAction func negative(_ sender: Any)
+     {
+        
+           result.text = "-" + result.text!
+            
+            
+            
+            
+       
+       
+       
+    }
+       
     @IBAction func dot(_ sender: Any)
     {
+        
+       /* if (result.text) = ""
+        {
+           result.text = "0."
+            
+            
+        }*/
+        
         if(m == 0)
         {
-        result.text = result.text! + "."
-       m = 1
+          
+          result.text = result.text! + "."
+          m = 1
         }
-        else{
-          result.text = result.text! + ""
-        }
-        judge = 1
+        else
+         {
+          result.text = result.text
+            
+         }
+          judge = 1
         
     }
     
@@ -211,7 +235,8 @@
         else
         {
             
-            if result.text == ""{
+            if result.text == ""
+            {
                 
                 result.text = "0"
                 
