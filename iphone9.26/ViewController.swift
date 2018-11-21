@@ -7,20 +7,21 @@
 //
 
     import UIKit
-    var result_1 = " "
-    var result_2 = " "
-    //var result_3 = ""
+    var result_1 = ""
+    var result_2 = ""
+    var number = 0
+    var judge  = 0
+    var add    = 0
+    var re     = 0
     var  m = 0
+    //var result_3 = ""
     class ViewController: UIViewController{
     @IBOutlet weak var result:  UITextField!
     override func didReceiveMemoryWarning()
     {
         super.didReceiveMemoryWarning()
     }
-    var number = 0
-    var judge  = 0
-    var add    = 0
-    var re     = 0
+    
     @IBAction func number1(_ sender: Any) {
         
         if re == 1
@@ -314,7 +315,8 @@
     @IBAction func divide(_ sender: Any)
     {
         m = 0
-        if add == 1{
+        if add == 1
+        {
             
             let a = Double(result_1)!
             
@@ -332,7 +334,7 @@
             
         }
         else
-        {
+            {
             
             if result.text == ""{
                 
