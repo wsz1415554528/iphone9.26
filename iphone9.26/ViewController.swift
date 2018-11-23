@@ -13,7 +13,8 @@
     var judge  = 0
     var add    = 0
     var re     = 0
-    var  m = 0
+    var m = 0
+    var result = 0
     //var result_3 = ""
     class ViewController: UIViewController{
     @IBOutlet weak var result:  UITextField!
@@ -410,10 +411,10 @@
                 result.text?.removeLast()
             }
         }
-        re = 1
+        re    = 1
         judge = 0
-        add = 0
-        m = 0
+        add   = 0
+        m     = 0
     }
 }
 
